@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Show Data" title="Show Data" onclick={handleClick} class="slds-var-m-around_x-small"> </lightning-button>
+
+            <template if:true={isVisible}>
+                <div>Data Access granted</div>
+            </template>
+
+            <lightning-input type="text" label="Enter Code" onkeyup={changeHandler}></lightning-input>
+            <template if:true={checkCode}>
+                <div>Correct</div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

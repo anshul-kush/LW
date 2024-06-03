@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Get Obj Info">
+        <div class="slds-var-p-around_medium">
+            Record Id: {defaultRecordTypeId}
+        </div>
+        <template if:true={wirProp.data}>
+            <div class="slds-var-p-around_medium">
+                <div>defaultRecordTypeId: {wirProp.data.defaultRecordTypeId}</div>
+                <div>ObjectApiName: {wirProp.data.apiName}</div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

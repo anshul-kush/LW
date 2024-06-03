@@ -1,0 +1,14 @@
+/* //Apply styling on element,classe, pseudo */
+p{
+    color:aqua;
+    font: size 30px;
+    border: 1px solid red;
+}
+.user{
+    color:pink;
+    font-size:20px;
+}
+.user:hover{
+    font-size:50px;
+    color: red
+}
