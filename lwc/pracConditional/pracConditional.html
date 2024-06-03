@@ -1,0 +1,19 @@
+<template>
+	<lightning-card title='Conditional'>
+		<div class='slds-var-p-around_medium'>
+			<p>Check this box </p>
+			<lightning-input type='checkbox' label='Tick Me' onchange={clickHandler}>
+			</lightning-input>
+            <lightning-input type='checkbox' label='Tick Me Not' onchange={clickFHandler}></lightning-input>
+		</div>
+        <div class='slds-var-p-around_medium'>
+            <template if:true={isCheck}>
+                <p>Awesome</p>
+            </template>
+            <template if:false={isCheck}>
+                <p>oops</p>
+            </template>
+        </div>
+
+	</lightning-card>
+</template>
