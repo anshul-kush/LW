@@ -1,0 +1,34 @@
+<template>
+	<template lwc:if={selectedAccountId}>
+
+	<lightning-card title="Account Search">
+		<c-account-search-input onsearch={handleSearch}></c-account-search-input>
+		<ul class="slds-list_vertical slds-list_bordered">
+			<div class="slds-var-p-around_medium">
+				<table class='slds-table
+						slds-table_bordered
+						slds-table_col-bordered
+						slds-table_striped'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Annual Revenue</th>
+							<th>Industry</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={searchResult} for:item="acc">
+							<tr key={acc.Id} data-sid={acc.id} onclick={handleClick}>
+								<td>{acc.Name}</td>
+								<td>{acc.AnnualRevenue}</td>
+								<td>{acc.Industry}</td>
+							</tr>
+						</template>
+					</tbody>
+				</table>
+			</div>
+		</ul>
+	</lightning-card>
+
+		</template>
+</template>

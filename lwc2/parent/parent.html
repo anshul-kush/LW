@@ -1,0 +1,9 @@
+<template>
+	<div ondemo={handleDivDemo} class="slds-box slds-theme_warning">
+		Parent div have info: {divMessage}
+		<div class="slds-box slds-theme_success">
+			Parent have info from child: {message}
+			<c-child ondemo={handleDemo}></c-child>
+		</div>
+	</div>
+</template>

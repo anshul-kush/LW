@@ -1,0 +1,30 @@
+<!-- <template>
+    <lightning-card title="Array to List">
+
+        <ul class="slds-list_vertical slds-list_bordered">
+            <p>Listed Items</p>
+        
+            <template for:each={oppList} for:item='opp'>
+                <li key={opp.id}>
+                    A: {opp.name}
+                </li>
+            </template>
+        
+        </ul>
+    </lightning-card>
+</template> -->
+<template>
+  <lightning-card title="Array to List">
+    <ul class="slds-list_vertical slds-list_bordered">
+    <div class="slds-var-p-around_medium">
+      <template for:each={oppList} for:item="opp">
+        <li key={opp.Id}>
+          Name: {opp.Name} <br />
+          Stage: {opp.StageName} <br />
+          Close Date: {opp.CloseDate} 
+        </li>
+      </template>
+      </div>
+    </ul>
+  </lightning-card>
+</template>
